@@ -6,7 +6,7 @@ This is a Reddit Bot which deletes all of a users comments from specified subred
 
 ### Authentication
 
-Generate your [Reddit API Authentication tokens](https://www.reddit.com/prefs/apps/)to add to the credentials file. The application must of type "script".
+Generate your [Reddit API Authentication tokens](https://www.reddit.com/prefs/apps/) to add to the credentials file. The application must of type "script".
 
 ### Import libraries
 
