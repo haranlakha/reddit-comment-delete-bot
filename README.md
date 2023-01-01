@@ -1,6 +1,6 @@
 # Reddit Comment Delete Bot
 
-This is a Reddit Bot which deletes all of a users comments from specified subreddits.
+This is a simple Reddit Bot which deletes all of a users comments from specified subreddits.
 
 ## Prerequisites
 
