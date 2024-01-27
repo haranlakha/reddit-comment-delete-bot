@@ -21,8 +21,10 @@ git clone https://github.com/haranlakha/reddit-comment-delete-bot
 ```
 
 ## Run code
+
+Run the code supplying the subreddit name as a command line argument
 ```
-python3 CommentDeleteBot.py
+python3 CommentDeleteBot.py subredditname
 ```
 
 
