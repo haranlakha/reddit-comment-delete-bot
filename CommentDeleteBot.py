@@ -2,6 +2,8 @@ import praw
 from prawcore.exceptions import Forbidden
 from RedditCredentials import *
 
+import sys
+
 USER_AGENT = "useragent goes here"
 
 USERNAME = REDDIT_USERNAME
@@ -9,13 +11,11 @@ PASSWORD = REDDIT_PASSWORD
 CLIENT_ID = REDDIT_CLIENT_ID
 CLIENT_SECRET = REDDIT_CLIENT_SECRET
 
-SUBREDDITS = ["subreddit 1", "subreddit 2", "subreddit 3"]
-
 def remove_all_comments(reddit):
 	try:
 		count = 0
 		for comment in reddit.user.me().comments.new(limit=None):
-		    if any(subreddit.lower() == comment.subreddit.display_name.lower() for subreddit in SUBREDDITS):
+		    if comment.subreddit.display_name.lower() == str(sys.argv[1]):
 		        count += 1
 		        print("Deleting: " + comment.body)
 		        comment.delete()
