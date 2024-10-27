@@ -12,10 +12,13 @@ CLIENT_ID = REDDIT_CLIENT_ID
 CLIENT_SECRET = REDDIT_CLIENT_SECRET
 
 def remove_all_comments(reddit):
+
+	subredditList = str(sys.argv[1]).split(',')
+
 	try:
 		count = 0
 		for comment in reddit.user.me().comments.new(limit=None):
-		    if comment.subreddit.display_name.lower() == str(sys.argv[1]):
+		    if comment.subreddit.display_name.lower() in subredditList:
 		        count += 1
 		        print("Deleting: " + comment.body)
 		        comment.delete()
